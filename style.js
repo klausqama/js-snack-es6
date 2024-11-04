@@ -30,10 +30,10 @@ let biciDiRiferimento = bici[0]
 
 for(let i = 0; i < bici.length; i++){
     const biciCorrente = bici[i]
-    console.log(biciCorrente)
+    //console.log(biciCorrente)
 
     if(biciCorrente.peso < biciDiRiferimento.peso)
-    console.log(`La ${biciCorrente.nome}, e piu leggera della ${biciDiRiferimento.nome} `),
+    //console.log(`La ${biciCorrente.nome}, e piu leggera della ${biciDiRiferimento.nome} `),
     biciDiRiferimento = biciCorrente
 
 };
@@ -72,6 +72,42 @@ const footballTeam = [
         falli: 0,
     },
 ]
+console.log(footballTeam)
+
+const newTeams = []
+
+for(let i = 0; i<footballTeam.length; i++){
+    const team = footballTeam[i]
+
+    team.punti = getRandomIntInclusive(0,50)
+    team.falli = getRandomIntInclusive(0,100)
+    console.log(team)
+
+    newTeams.push({
+        nome : team.nome,
+        falli : team.falli,
+
+    })
+}
+console.log(newTeams)
+
+
+
+function getRandomIntInclusive(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+  }
+  
+
+
+
+
+
+
+
+
+
 
 //Snack 3 (Bonus)
 //Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
